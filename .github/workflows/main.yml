@@ -35,7 +35,7 @@ jobs:
         run: cargo fmt --check
 
       - name: clippy
-        uses: jerensl/cargo-annotation@ci-composite-action-clippy-annotation
+        uses: jerensl/actions/cargo-annotation@ci-composite-action-clippy-annotation
         with:
           cargo-command: clippy --features '${{ matrix.features }}' --target '${{ matrix.platform.target }}'
           with-annotation: ${{ matrix.platform.target == 'x86_64-unknown-linux-gnu' && matrix.features == '' }}
