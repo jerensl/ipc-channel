@@ -37,7 +37,7 @@ jobs:
       - name: clippy
         uses: jerensl/actions/cargo-annotation@cargo-annotation-support-clippy-warnings-flags
         with:
-          cargo-command: clippy --features '${{ matrix.features }}' --target '${{ matrix.platform.target }} -- -D warnings'
+          cargo-command: clippy --features '${{ matrix.features }}' --target '${{ matrix.platform.target }}' -- -D warnings
           with-annotation: ${{ matrix.platform.target == 'x86_64-unknown-linux-gnu' && matrix.features == '' }}
 
       - name: Cargo test
