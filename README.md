@@ -1,5 +1,6 @@
 `ipc-channel` is an inter-process implementation of Rust channels (which were inspired by CSP[^CSP]).
 
+:
 A Rust channel is a unidirectional, FIFO queue of messages which can be used to send messages between threads in a single operating system process.
 For an excellent introduction to Rust channels, see [Using Message Passing to Transfer Data Between Threads](https://doc.rust-lang.org/stable/book/ch16-02-message-passing.html) in the Rust reference.
 
