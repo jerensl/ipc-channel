@@ -38,7 +38,7 @@ jobs:
         uses: jerensl/actions/cargo-annotation@cargo-annotation-support-clippy-warnings-flags
         with:
           cargo-command: clippy --features '${{ matrix.features }}' --target '${{ matrix.platform.target }}' -- -D warnings
-          with-annotation: ${{ matrix.platform.target == 'x86_64-unknown-linux-gnu' && matrix.features == '' }}
+          with-annotation: ${{ matrix.platform.target == 'aarch64-apple-darwin' && matrix.features == 'force-inprocess' }}
 
       - name: Cargo test
         run: cargo test --features "${{ matrix.features }} enable-slow-tests" --target ${{ matrix.platform.target }}
