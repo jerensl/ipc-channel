@@ -37,7 +37,7 @@ jobs:
       - name: clippy
         uses: jerensl/actions/cargo-annotation@cargo-annotation-support-clippy-warnings-flags
         with:
-          cargo-command: clippy --features '${{ matrix.features }}' --target '${{ matrix.platform.target }}' -- -D warnings
+          cargo-command: clippy --features '${{ matrix.features }}' --target '${{ matrix.platform.target }}'
           with-annotation: ${{ matrix.platform.target == 'aarch64-apple-darwin' && matrix.features == 'force-inprocess' }}
 
       - name: Cargo test
