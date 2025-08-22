@@ -35,7 +35,7 @@ jobs:
         run: cargo fmt --check
 
       - name: clippy
-        uses: jerensl/actions/cargo-annotation@fix-github-action-path-on-cargo-annotation
+        uses: jerensl/actions/cargo-annotation@github-annotation-bash-to-python
         with:
           cargo-command: clippy --features '${{ matrix.features }}' --target '${{ matrix.platform.target }}'
           with-annotation: ${{ matrix.platform.target == 'x86_64-unknown-linux-gnu' && matrix.features == 'async' }}
