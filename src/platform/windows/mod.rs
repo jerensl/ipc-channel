@@ -1847,7 +1847,7 @@ impl OsIpcSharedMemory {
             assert!(length < u32::MAX as usize);
             let (lhigh, llow) = (
                 length.checked_shr(32).unwrap_or(0) as u32,
-                (length & 0xffffffff) as u32,
+                length as u32,
             );
             let handle = CreateFileMappingA(
                 INVALID_HANDLE_VALUE,
