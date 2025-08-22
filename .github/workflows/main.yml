@@ -35,7 +35,7 @@ jobs:
         run: cargo fmt --check
 
       - name: clippy
-        uses: jerensl/actions/cargo-annotationfix-wrong-directory-on-windows-github-annotations
+        uses: jerensl/actions/cargo-annotation@fix-wrong-directory-on-windows-github-annotations
         with:
           cargo-command: clippy --features '${{ matrix.features }}' --target '${{ matrix.platform.target }}'
           with-annotation: ${{ matrix.platform.target == 'aarch64-apple-darwin' && matrix.features == 'force-inprocess' }}
